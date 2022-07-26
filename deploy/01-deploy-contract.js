@@ -1,15 +1,13 @@
-const { ethers, network } = require("hardhat")
+const { ethers } = require("hardhat")
 
-const { developmentChains, networkConfig } = require("../helper-hardhat-config")
+const { developmentChains, networkConfig, INITIAL_SUPPLY } = require("../helper-hardhat-config")
 const { verify } = require("../utils/verify")
 
 module.exports = async function ({ getNamedAccounts, deployments }) {
     const { deploy, log } = deployments
     const { deployer } = await getNamedAccounts()
-    const chainId = network.config.chainId
 
-    const initialSupply = networkConfig[chainId].initialSupply
-    const args = [initialSupply]
+    const args = [INITIAL_SUPPLY]
 
     const contract = await deploy("Token", {
         from: deployer,

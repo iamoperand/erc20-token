@@ -33,6 +33,12 @@ module.exports = {
         deployer: {
             default: 0,
         },
+        user1: {
+            default: 1,
+        },
+        user2: {
+            default: 2,
+        },
     },
     gasReporter: {
         enabled: false,
