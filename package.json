@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "@openzeppelin/contracts": "^4.7.1",
     "hardhat": "^2.10.1"
   }
 }
